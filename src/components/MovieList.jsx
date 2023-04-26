@@ -1,6 +1,9 @@
 import { MovieCard } from "./MovieCard"
 
-export const MovieList = ()=>{
+export const MovieList = (props)=>{
+
+    const {list} = props;
+    
     return (
         <ul>
             <MovieCard name="Lord of the Rings" />
