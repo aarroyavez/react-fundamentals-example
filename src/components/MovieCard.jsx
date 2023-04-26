@@ -15,5 +15,5 @@ export const MovieCard = (props) => {
             </li>   
     );
 }
-
+ 
     
