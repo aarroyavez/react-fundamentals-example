@@ -1,15 +1,18 @@
 export const MovieCard = (props) => {
-    const {name} = props;
+    const {name, onCheckTimeClick} = props;
+
+    const handleClick = () =>{
+        console.log(`time for ${name}`);
+        onCheckTimeClick(name);
+    };
 
     return (
-        <ul>
             <li>
                 <article>
                     <h3>{name}</h3>
-                    <button>Check times</button>
+                    <button onClick={handleClick}>Check times</button>
                 </article>
-            </li>
-        </ul>
+            </li>   
     );
 }
 
