@@ -1,3 +1,5 @@
+import { MovieCard; } from "./MovieCard"
+
 export const MovieList = ()=>{
     return (
         <ul>
@@ -7,14 +9,9 @@ export const MovieList = ()=>{
                     <button>Check times</button>
                 </article>
             </li>
-            <li>
-                <article>
-                    <h3>Back to the Future</h3>
-                    <button>Check times</button>
-                </article>
-            </li>   
+            <MovieCard name="Lord of the Rings" />
+            <MovieCard name="Back to the Future" />
 
-        </ul>
     );
 }
 
