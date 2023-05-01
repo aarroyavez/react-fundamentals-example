@@ -1,17 +1,29 @@
+import { useState } from "react";
 import { MovieCard } from "./MovieCard"
 
 export const MovieList = (props)=>{
     const {list} = props;
+    const [favourites, setFavourites] = useState([]); 
 
-    const handleCheckTime = (movieName) => {
-        console.log(`check time clicked from ${movieName}`)
+    const handleFavouriteClick = (movieName) => {
+        console.log(`favourite clicked from ${movieName}`)
+    
+        if(!favourites.includes(movieName)){
+            setFavourites([...favourites, movieName]);
+        }
     };
+
+    console.log({favourites});
 
     return (
         <ul>
             {
             list.map((movie) => (
-                <MovieCard name={movie.name} onCheckTimeClick={handleCheckTime} />
+                <MovieCard 
+                key={movie.name}
+                name={movie.name} 
+                onCheckTimeClick={handleFavouriteClick} 
+                />
         ))}  
         </ul>
     );
